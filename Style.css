@@ -2,63 +2,63 @@ body {
   background-color: #eaf1f1;
 }
 
+
 .webName {
   font-family: cursive;
   color: grey;
-  margin-left: 28px;
+  margin-left: 67px;
   margin-top: 25px;
   margin-bottom: 7px;
   font-size: 20px;
 }
 
-.weblist{
-  text-decoration: none;
-  margin-top: 50px;
+
+.web-list-left{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: left;
+}
+.web-list-left ul li {
+  display: inline-block;
   margin-left: 30px;
+}
+.weblist,
+.weblist1 {
+  text-decoration: none;
   color: black;
   font-size: 10px;
   font-family: monospace;
 }
-
 .weblist1{
-  text-decoration: none;
-  margin-top: 50px;
-  margin-left: 45px;
   color:  #ff5a00;
-  font-size: 10px;
-  font-family: monospace;
 }
 
-.weblistright1{
+
+.web-list-right{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: left;
+}
+.web-list-right ul li {
+  list-style: none;
+  display: inline-block;
+}
+.weblistright1,
+.weblistright2,
+.weblistright3,
+.weblistright4 {
   text-decoration: none;
-  margin-left: 650px;
   color: black;
   font-size: 8.5px;
   font-family: monospace;
+  margin-left: 30px;
 }
-
-.weblistright2{
-  text-decoration: none;
-  margin-left: 50px;
-  color: black;
-  font-size: 8.5px;
-  font-family: monospace;
+.weblistright1 {
+  margin-left: 1150px;
 }
-
-.weblistright3{
-  text-decoration: none;
-  margin-left: 60px;
-  color: black;
-  font-size: 8.5px;
-  font-family: monospace;
-}
-
-.weblistright4{
-  text-decoration: none;
-  margin-left: 52px;
-  color: black;
-  font-size: 8.5px;
-  font-family: monospace;
+.weblistright4 {
   border: 0px solid;
   padding: 6px;
   background-color: #ff5a00;
@@ -88,18 +88,20 @@ body {
 
 .ITh{
   font-size: 47px;
+  margin-left: 20px;
+  margin-right: 18px;
 }
 
 .ITp{
   font-size: 18px;
-  margin-right: 8px;
-  margin-right: 8px;
+  margin-left: 25px;
+  margin-right: 22px;
 }
 
 .button {
   margin-left: 100px;
   border: 0px solid;
-  padding: 6px;
+  padding: 10px;
   background-color: #ff5a00;
   color: white;
   text-decoration: none;
@@ -156,4 +158,116 @@ body {
 
 .fa-youtube{
   color: red;
+}
+
+
+
+/* BASICS FOR GRID */
+.grid {
+  padding: 100px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50% 50%;
+  grid-gap: 15px;
+  grid-template-areas: 
+  "grid1 grid1 grid2 grid5"
+  "grid3 grid4 grid4 grid5";
+}
+.grid article {
+  border: 0px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* GRID 1 TO 5 */
+.grid1 {
+  background: linear-gradient(to top left, rgb(148, 148, 148),rgb(255,255,255));
+  color: black;
+  grid-area: grid1;
+  transition: transform .2s;
+}
+.grid1:hover {
+  transform: scale(1.05);
+}
+
+.grid2 {
+  background: linear-gradient(to bottom right,rgb(146, 69, 218),rgb(145, 48, 145));
+  color: white;
+  grid-area: grid2;
+  transition: transform .2s;
+}
+.grid2:hover {
+  transform: scale(1.05);
+}
+
+.grid3 {
+  background: linear-gradient(to bottom left,rgb(182, 91, 159),rgb(66, 2, 58));
+  color: white;
+  grid-area: grid3;
+  transition: transform .2s;
+}
+.grid3:hover {
+  transform: scale(1.05);
+}
+
+.grid4 {
+  background: linear-gradient(TO top left,rgb(2, 0, 49),rgb(6, 1, 20));
+  color: white;
+  grid-area: grid4;
+  transition: transform .2s;
+}
+.grid4:hover {
+  transform: scale(1.05);
+}
+
+.grid5 {
+  background:linear-gradient(to top left,rgb(24, 24, 24),rgb(83, 83, 83));
+  color: white;
+  grid-area: grid5;
+  transition: transform .2s;
+}
+.grid5:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGES */
+.img {
+  margin-left: 20px;
+  border-radius: 50%;
+  height: 40px;
+  border: 1px solid white;
+}
+
+/* NAME */
+.name {
+  margin-left: 85px;
+  margin-top: -47px;
+  font-weight: bolder;
+}
+.grid2 .name {
+  font-size: 21px;
+}
+.grid3 .name {
+  font-size: 23px;
+}
+
+/* POSITION */
+.position {
+  margin-top: -20px;
+  margin-left: 90px;
+  color: rgb(179, 179, 179);
+}
+.grid2 .position {
+  margin-top: -14px;
+}
+
+/* HEADING */
+.heading {
+  font-family:serif;
+  font-weight: bolder;
+  font-size: larger;
 }
